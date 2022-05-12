@@ -1,0 +1,236 @@
+click();
+upgrades();
+sell();
+music();
+codes();
+reset();
+// 
+var x = prompt("Sound is needed");
+function click() {
+  onEvent("bitcoin", "click", function( ) {
+    setNumber("bitcoin_counter", getNumber("bitcoin_counter") + getNumber("computer_bought"));
+    playSound("sound://category_collect/collect_item_bling_1.mp3", false);
+  });
+}
+function upgrades() {
+  onEvent("shop", "click", function( ) {
+    setScreen("shop_screen");
+  });
+  onEvent("back", "click", function( ) {
+    setScreen("main_screen");
+  });
+  onEvent("new_pc", "click", function( ) {
+    if (getNumber("money_counter") >= 100) {
+      setScreen("main_screen");
+      setNumber("computer_bought", getNumber("computer_bought") + 0.25);
+      setNumber("money_counter", getNumber("money_counter") - 100);
+      playSpeech("New Computer Bought", "male", "English");
+    }
+  });
+  if (getNumber("miner_bought") == 0.25) {
+    showElement("miner1");
+  }
+  onEvent("make_utlra_miner", "click", function( ) {
+    if (getNumber("miner_bought") == 2.25) {
+      if (getNumber("money_counter") >= 1000) {
+        hideElement("miner1");
+        hideElement("miner2");
+        hideElement("miner3");
+        hideElement("miner4");
+        hideElement("miner5");
+        hideElement("miner6");
+        hideElement("miner7");
+        hideElement("miner8");
+        hideElement("miner9");
+        showElement("ultra_miner");
+        setNumber("money_counter", getNumber("money_counter") - 1000);
+        setNumber("miner_bought", getNumber("miner_bought") * 2);
+        hideElement("make_utlra_miner");
+        hideElement("label7");
+        hideElement("new_miner");
+        hideElement("label4");
+        playSpeech("Ultra miner upgrade complete", "male", "English");
+      }
+    }
+    playSpeech("Please buy 9 miners to make ULTRA MINER.", "male", "English");
+  });
+  onEvent("new_miner", "click", function( ) {
+    if (getNumber("money_counter") >= 200) {
+      setScreen("miner_screen");
+      setNumber("miner_bought", getNumber("miner_bought") + 0.25);
+      setNumber("money_counter", getNumber("money_counter") - 200);
+      playSpeech("New Miner Bought", "male", "English");
+      if (getNumber("miner_bought") == 0.25) {
+        showElement("miner1");
+      }
+      if (getNumber("miner_bought") == 0.5) {
+        showElement("miner1");
+        showElement("miner2");
+      }
+      if (getNumber("miner_bought") == 0.75) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+      }
+      if (getNumber("miner_bought") == 1) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+      }
+      if (getNumber("miner_bought") == 1.25) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+        showElement("miner5");
+      }
+      if (getNumber("miner_bought") == 1.5) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+        showElement("miner5");
+        showElement("miner6");
+      }
+      if (getNumber("miner_bought") == 1.75) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+        showElement("miner5");
+        showElement("miner6");
+        showElement("miner7");
+      }
+      if (getNumber("miner_bought") == 2) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+        showElement("miner5");
+        showElement("miner6");
+        showElement("miner7");
+        showElement("miner8");
+      }
+      if (getNumber("miner_bought") == 2.25) {
+        showElement("miner1");
+        showElement("miner2");
+        showElement("miner3");
+        showElement("miner4");
+        showElement("miner5");
+        showElement("miner6");
+        showElement("miner7");
+        showElement("miner8");
+        showElement("miner9");
+      }
+      if (getNumber("miner_bought") == 2.25) {
+        playSpeech("Now you have bought all the miners. If you have the 9 miners and $1000 you can buy 1 ULTRA MINER.", "male", "English");
+      }
+    } else {
+      
+    }
+  });
+  if (getNumber("miner_bought") >= 0.25) {
+    timedLoop(1000, function() {
+      setNumber("bitcoin_counter", getNumber("bitcoin_counter") + getNumber("miner_bought"));
+    });
+  }
+  onEvent("miners", "click", function( ) {
+    setScreen("miner_screen");
+  });
+  onEvent("back3", "click", function( ) {
+    setScreen("main_screen");
+  });
+}
+function sell() {
+  onEvent("sell", "click", function( ) {
+    setNumber("money_counter", getNumber("money_counter") + getNumber("bitcoin_counter") * 0.50);
+    setNumber("bitcoin_counter", 0);
+    playSound("sound://category_alerts/vibrant_game_courious_alert_3_winner.mp3", false);
+  });
+}
+function music() {
+  onEvent("playmusic", "click", function( ) {
+    hideElement("playmusic");
+    playSound("a-promise.mp3", true);
+  });
+  onEvent("stopmusic", "click", function( ) {
+    showElement("playmusic");
+    stopSound("a-promise.mp3");
+  });
+}
+function codes() {
+  onEvent("back2", "click", function( ) {
+    setScreen("main_screen");
+  });
+  onEvent("code", "click", function( ) {
+    setScreen("code_screen");
+  });
+  onEvent("code_redeem", "click", function( ) {
+    if (getText("code_input") == "feesh") {
+      if (getText("feesh") == "0") {
+        setNumber("bitcoin_counter", getNumber("bitcoin_counter") + 100);
+        setNumber("feesh", getNumber("feesh") + 100);
+        playSpeech("CODE REDEEMED: +₿100", "male", "English");
+      }
+    }
+    if (getText("code_input") == "imrich") {
+      if (getText("imrich") == "0") {
+        setNumber("money_counter", getNumber("money_counter") + 100);
+        setNumber("imrich", getNumber("imrich") + 100);
+        playSpeech("CODE REDEEMED: +$100", "male", "English");
+      }
+    }
+    if (getText("code_input") == "urmom8") {
+      if (getText("urmom8") == "0") {
+        setNumber("money_counter", getNumber("money_counter") + 400);
+        setNumber("urmom8", getNumber("urmom8") + 100);
+        playSpeech("CODE REDEEMED: +$400", "male", "English");
+      }
+    }
+    if (getText("code_input") == "robocop") {
+      if (getText("robocop") == "0") {
+        setNumber("bitcoin_counter", getNumber("bitcoin_counter") + 400);
+        setNumber("robocop", getNumber("robocop") + 100);
+        playSpeech("CODE REDEEMED: +₿400", "male", "English");
+      }
+    }
+    if (getText("code_input") == "idiotgames") {
+      if (getText("idiotgames") == "0") {
+        setNumber("bitcoin_counter", getNumber("bitcoin_counter") + 250);
+        setNumber("money_counter", getNumber("money_counter") + 250);
+        setNumber("idiotgames", getNumber("idiotgames") + 100);
+        playSpeech("CODE REDEEMED: +₿250 / +$250", "male", "English");
+      }
+    }
+    if (getText("code_input") == "bitcoinB") {
+      if (getText("bitcoin") == "0") {
+        setNumber("bitcoin_counter", getNumber("bitcoin_counter") + 250);
+        setNumber("bitcoinB", getNumber("bitcoinB") + 100);
+        playSpeech("CODE REDEEMED: +₿250", "male", "English");
+      }
+    }
+  });
+}
+function reset() {
+  onEvent("reset", "click", function( ) {
+    var x = prompt("ALL stats and purchases will be erased PERMANTALY. In event of accidentaly clicking reset we apologize but everything will still be deleted. A back-up has not been made (we have to intent to make one so do not expect one in the future).");
+    setNumber("bitcoin_counter", 0);
+    setNumber("money_counter", 0);
+    hideElement("miner2");
+    hideElement("miner3");
+    hideElement("miner4");
+    hideElement("miner5");
+    hideElement("miner6");
+    hideElement("miner7");
+    hideElement("miner8");
+    hideElement("miner9");
+    playSound("mixkit-futuristic-transition-sweep-2634.mp3", false);
+    setNumber("feesh", 0);
+    setNumber("idiotgames", 0);
+    setNumber("imrich", 0);
+    setNumber("robocop", 0);
+    setNumber("urmom8", 0);
+    setNumber("bitcoinB", 0);
+  });
+}
