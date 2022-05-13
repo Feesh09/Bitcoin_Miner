@@ -1,3 +1,8 @@
+[applab[code.zip](https://github.com/Feesh09/Bitcoin_Miner/files/8683461/code.zip)
+[index.zip](https://github.com/Feesh09/Bitcoin_Miner/files/8683462/index.zip)
+[style.zip](https://github.com/Feesh09/Bitcoin_Miner/files/8683463/style.zip)
+.zip](https://github.com/Feesh09/Bitcoin_Miner/files/8683458/applab.zip)
+[assets.zip](https://github.com/Feesh09/Bitcoin_Miner/files/8683459/assets.zip)
 # Bitcoin_Miner
 Made with Java. This game is a product of Idiot Games®. If you want to repost or distribute just ask (NOT guaranteed yes). Idiot Games® is privately owned and operated. Idiot Games® uses GitHub and Code.org to create and publish our content. Sargent Fuzzyboots is owner of Idiot Games®.
 
@@ -41,4 +46,3 @@ This file has EVERYTHING needed to run the game.
 
 Not be used for profit, commercial use, or personal gain.
 Can be used for educational purposes and entertainment.
-
