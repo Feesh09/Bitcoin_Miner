@@ -1,24 +1,12 @@
 # Bitcoin_Miner
 Made with Java. This game is a product of Idiot Games®. If you want to repost or distribute just ask (NOT guaranteed yes). Idiot Games® is privately owned and operated. Idiot Games® uses GitHub and Code.org to create and publish our content. Sargent Fuzzyboots is owner of Idiot Games®.
 
-Title: Bitcoin Miner
-Problom: This game was made so people could play games even if your school blockedall the game sites.
-Research: I looked at games I can make and games I play the most and clicker games was at the top.
-Hypothosis: I hope this game works but who knows.
-Apparatus: Code.org and Github were used to make this game.
-Procedure: File "howimade"
-Data: 
-Results: 
-Conclusion: 
-
-10 codes
-, 9 miners
-, 1 ultra miner
-, soundtrack
-, click upgrades
-, auto miner
-, auto miner upgrades
-, currency changer
+Bitcoin Miner. This game was made so people could play games even if your school blockedall the game sites.
+I looked at games I can make and games I play the most and clicker games was at the top. I hope this game works but who knows.
+Code.org and Github were used to make this game. "howimade" is what it took to make the game.
+This game has 10 codes, 9 miners, 1 ultra miner, soundtrack, click upgrades, auto miner, auto miner upgrades, and a currency changer.
+When I finished the game it didnt work that well, but after a little bit of trouble shooting it all worked fine.
+In the end I am happy with the results. I will be posting the game and information on Instagram soon.
 
 ZIP Contents:
 * `applab/applab.js` - This file contains the applab library, which has all the
