@@ -1,6 +1,16 @@
 # Bitcoin_Miner
 Made with Java. This game is a product of Idiot Games®. If you want to repost or distribute just ask (NOT guaranteed yes). Idiot Games® is privately owned and operated. Idiot Games® uses GitHub and Code.org to create and publish our content. Sargent Fuzzyboots is owner of Idiot Games®.
 
+Title: Bitcoin Miner
+Problom: This game was made so people could play games even if your school blockedall the game sites.
+Research: I looked at games I can make and games I play the most and clicker games was at the top.
+Hypothosis: I hope this game works but who knows.
+Apparatus: Code.org and Github were used to make this game.
+Procedure: File "howimade"
+Data: 
+Results: 
+Conclusion: 
+
 10 codes
 , 9 miners
 , 1 ultra miner
