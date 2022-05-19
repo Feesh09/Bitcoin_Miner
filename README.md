@@ -32,7 +32,7 @@ ZIP Contents:
 
 Bitcoin Miner RAW
 This code has everything you need EXCEPT the buttons, labels, inputs, etc.
-I am currentally working on a code where EVERYTHING you need (release date unknown).
+I am currently working on a code where EVERYTHING you need (release date unknown).
 
 Bitcoin Miner ZIP
 This file has EVERYTHING needed to run the game.
