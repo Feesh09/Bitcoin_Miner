@@ -1,11 +1,11 @@
 # Security Policy
 
 # Stolen Content
-Please report any found copies to Report in discussions.
+Please report any found copies to Stolen Content in discussions.
 All reports will be reviewed and action will be taken.
 
 # Issue
-Please report any found errors of the code or in the repository.
+Please report any found errors of the code or in the repository to Issues in discussions.
 All errors will be reviewed and an attempt to fix the issue will be made.
 
 # Formats
